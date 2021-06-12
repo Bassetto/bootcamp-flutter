@@ -22,101 +22,92 @@ class BootcampDetails extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(20.0),
         children: [
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Center(
-                  child: Text(
-                    "Nome do bootcamp",
-                    style: AppTextStyles.title,
-                  ),
-                ),
-                Text(
-                  bootcamp.nome,
+          Text(
+            "Nome do bootcamp",
+            style: AppTextStyles.title,
+          ),
+          Text(
+            bootcamp.nome,
+            style: AppTextStyles.body,
+          ),
+          espaco(),
+          Text(
+            "Área do bootcamp",
+            style: AppTextStyles.title,
+          ),
+          Text(
+            bootcamp.area,
+            style: AppTextStyles.body,
+          ),
+          espaco(),
+          Text(
+            "Status do bootcamp",
+            style: AppTextStyles.title,
+          ),
+          Text(
+            _getStatus(bootcamp.status),
+            style: AppTextStyles.body,
+          ),
+          espaco(),
+          Text(
+            "Plano de Treinamento do bootcamp",
+            style: AppTextStyles.title,
+          ),
+          Text(
+            bootcamp.planoTreinamento,
+            style: AppTextStyles.body,
+          ),
+          espaco(),
+          Text(
+            "Conteúdo do bootcamp",
+            style: AppTextStyles.title,
+          ),
+          Text(
+            bootcamp.conteudo,
+            style: AppTextStyles.body,
+          ),
+          espaco(),
+          Text(
+            "Data do bootcamp",
+            style: AppTextStyles.title,
+          ),
+          Text(
+            DateFormat("dd/MM/yyyy").format(bootcamp.data),
+            style: AppTextStyles.body,
+          ),
+          espaco(),
+          Text(
+            "Local do bootcamp",
+            style: AppTextStyles.title,
+          ),
+          RichText(
+            text: TextSpan(
+              text: bootcamp.espaco.logradouro,
+              style: AppTextStyles.body,
+              children: <InlineSpan>[
+                TextSpan(
+                  text: ", ${bootcamp.espaco.numero}",
                   style: AppTextStyles.body,
                 ),
-                espaco(),
-                Text(
-                  "Área do bootcamp",
-                  style: AppTextStyles.title,
-                ),
-                Text(
-                  bootcamp.area,
+                TextSpan(
+                  text: " - ${bootcamp.espaco.cep}",
                   style: AppTextStyles.body,
-                ),
-                espaco(),
-                Text(
-                  "Status do bootcamp",
-                  style: AppTextStyles.title,
-                ),
-                Text(
-                  _getStatus(bootcamp.status),
-                  style: AppTextStyles.body,
-                ),
-                espaco(),
-                Text(
-                  "Plano de Treinamento do bootcamp",
-                  style: AppTextStyles.title,
-                ),
-                Text(
-                  bootcamp.planoTreinamento,
-                  style: AppTextStyles.body,
-                ),
-                espaco(),
-                Text(
-                  "Conteúdo do bootcamp",
-                  style: AppTextStyles.title,
-                ),
-                Text(
-                  bootcamp.conteudo,
-                  style: AppTextStyles.body,
-                ),
-                espaco(),
-                Text(
-                  "Data do bootcamp",
-                  style: AppTextStyles.title,
-                ),
-                Text(
-                  DateFormat("dd/MM/yyyy").format(bootcamp.data),
-                  style: AppTextStyles.body,
-                ),
-                espaco(),
-                Text(
-                  "Local do bootcamp",
-                  style: AppTextStyles.title,
-                ),
-                RichText(
-                  text: TextSpan(
-                    text: bootcamp.espaco.logradouro,
-                    style: AppTextStyles.body,
-                    children: <InlineSpan>[
-                      TextSpan(
-                        text: ", ${bootcamp.espaco.numero}",
-                        style: AppTextStyles.body,
-                      ),
-                      TextSpan(
-                        text: " - ${bootcamp.espaco.cep}",
-                        style: AppTextStyles.body,
-                      ),
-                    ],
-                  ),
-                ),
-                RichText(
-                  text: TextSpan(
-                    text: "Capacidade de Pessoas:",
-                    style: AppTextStyles.bodyBold,
-                    children: <InlineSpan>[
-                      TextSpan(
-                        text: " ${bootcamp.espaco.capacidadePessoas}",
-                        style: AppTextStyles.body,
-                      ),
-                    ],
-                  ),
                 ),
               ],
             ),
-          )
+          ),
+          RichText(
+            text: TextSpan(
+              text: "Capacidade de Pessoas:",
+              style: AppTextStyles.bodyBold,
+              children: <InlineSpan>[
+                TextSpan(
+                  text: " ${bootcamp.espaco.capacidadePessoas}",
+                  style: AppTextStyles.body,
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

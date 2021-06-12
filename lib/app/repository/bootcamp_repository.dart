@@ -27,13 +27,13 @@ class BootcampRepository {
         DateTime.utc(2021, 5, ++cData),
         UsuarioModel((cUsuario++).toDouble(), "Coach", "coach$cUsuario@mail.com", "1234", TipoUsuario.COACH),
         [
-          UsuarioModel((cUsuario++).toDouble(), "Professor ${cProfessores++}", "professor$cProfessores@mail.com", "1234", TipoUsuario.PROFESSOR),
+          UsuarioModel((cUsuario++).toDouble(), "Professor ${++cProfessores}", "professor$cProfessores@mail.com", "1234", TipoUsuario.PROFESSOR),
         ],
         [
-          UsuarioModel((cUsuario++).toDouble(), "Candidato ${cCandidatos++}", "candidato$cCandidatos@mail.com", "1234", TipoUsuario.CANDIDATO),
-          UsuarioModel((cUsuario++).toDouble(), "Candidato ${cCandidatos++}", "candidato$cCandidatos@mail.com", "1234", TipoUsuario.CANDIDATO),
-          UsuarioModel((cUsuario++).toDouble(), "Candidato ${cCandidatos++}", "candidato$cCandidatos@mail.com", "1234", TipoUsuario.CANDIDATO),
-          UsuarioModel((cUsuario++).toDouble(), "Candidato ${cCandidatos++}", "candidato$cCandidatos@mail.com", "1234", TipoUsuario.CANDIDATO),
+          UsuarioModel((cUsuario++).toDouble(), "Candidato ${++cCandidatos}", "candidato$cCandidatos@mail.com", "1234", TipoUsuario.CANDIDATO),
+          UsuarioModel((cUsuario++).toDouble(), "Candidato ${++cCandidatos}", "candidato$cCandidatos@mail.com", "1234", TipoUsuario.CANDIDATO),
+          UsuarioModel((cUsuario++).toDouble(), "Candidato ${++cCandidatos}", "candidato$cCandidatos@mail.com", "1234", TipoUsuario.CANDIDATO),
+          UsuarioModel((cUsuario++).toDouble(), "Candidato ${++cCandidatos}", "candidato$cCandidatos@mail.com", "1234", TipoUsuario.CANDIDATO),
         ]
       ));
       bootcamps.add(BootcampModel(
